@@ -1,5 +1,7 @@
+import { useState } from "react";
+
 export default function Contador() {
-  let numero = 10;
+  let [numero, setNumero] = useState(10);
 
   return (
     <article className="text-center">
@@ -8,8 +10,7 @@ export default function Contador() {
       <button
         className="btn btn-primary"
         onClick={() => {
-          numero++;
-          console.log(numero);
+          setNumero(numero + 1);
         }}
       >
         +1
